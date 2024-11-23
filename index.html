@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Federal Work Study Budget Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Federal Work Study Budget Calculator</h1>
+  </header>
+  <main>
+    <section id="input-section">
+      <form id="calculator-form">
+        <label for="hourly-rate">Hourly Rate ($):</label>
+        <input type="number" id="hourly-rate" placeholder="e.g., 15" required>
+
+        <label for="hours-per-week">Hours Worked Per Week:</label>
+        <input type="number" id="hours-per-week" placeholder="e.g., 20" required>
+
+        <label for="weeks-worked">Weeks Worked:</label>
+        <input type="number" id="weeks-worked" placeholder="e.g., 10" required>
+
+        <label for="work-type">Work Type:</label>
+        <select id="work-type" required>
+          <option value="FWS">Federal Work-Study (FWS)</option>
+          <option value="Non-FWS">Non-Federal Work-Study</option>
+        </select>
+
+        <button type="button" id="calculate-btn">Calculate</button>
+      </form>
+    </section>
+
+    <section id="results-section">
+      <h2>Results</h2>
+      <div id="fws-results" class="result-block">
+        <h3>Federal Work-Study (FWS)</h3>
+        <p>Total Wages: <span id="fws-total-wages">$0</span></p>
+        <p>Department Contribution (25%): <span id="fws-department-contribution">$0</span></p>
+        <p>ERE (2%): <span id="fws-ere">$0</span></p>
+        <p>FWS Service Fee (10%): <span id="fws-service-fee">$0</span></p>
+        <p><strong>Total Department Cost: <span id="fws-total-cost">$0</span></strong></p>
+      </div>
+
+      <div id="nonfws-results" class="result-block">
+        <h3>Non-Federal Work-Study</h3>
+        <p>Total Wages: <span id="nonfws-total-wages">$0</span></p>
+        <p>Department Contribution (100%): <span id="nonfws-department-contribution">$0</span></p>
+        <p>ERE (2%): <span id="nonfws-ere">$0</span></p>
+        <p><strong>Total Department Cost: <span id="nonfws-total-cost">$0</span></strong></p>
+      </div>
+
+      <div id="comparison-results">
+        <h3>Comparison</h3>
+        <p>Total Savings with FWS: <span id="savings">$0</span></p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© [2024] University of Arizona</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
